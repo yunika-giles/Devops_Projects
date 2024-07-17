@@ -1,4 +1,4 @@
-# DevOp Project: Deploy a Dynamic Website by running a docker container
+# DevOp Project: Deploying a Dynamic Website on a docker container
 
 ## Project Outline 
 - The Development and Production environment should be separated.
@@ -10,21 +10,20 @@
 ## Download your Bootstrap Template
 click [Here](https://bootstrapmade.com) to download your Bootstrap Template.
 
-TODO: Add a link to the Bootstrap image
-![Bootstrap Template]()
-You can click on `live` to view the websites: 
-TODO: Add a link to the Bootstrap image
+![Bootstrap Template](https://github.com/yunika-giles/Devops_Projects/blob/main/images/SCR-20240717-pkpz.png)
 
-![Bootstrap Template]()
+You can click on `live` to view the websites: 
+
+![Bootstrap Template](https://github.com/yunika-giles/Devops_Projects/blob/main/images/SCR-20240717-ssjl.png)
 
 When you are satisfied with your selection then download it by clicking on `Free Download`. 
+
+![Bootstrap Template](https://github.com/yunika-giles/Devops_Projects/blob/main/images/download.png)
 
 ## Github
 Create a project repository on Github:
 
-TODO: Add a link to the Bootstrap image.
-![Bootstrap image]()
-![Bootstrap image]()
+![Bootstrap image](https://github.com/yunika-giles/Devops_Projects/blob/main/images/github.png)
 
 Input your repository name, give it a description and then create the repository. 
 
