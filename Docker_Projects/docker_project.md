@@ -1,5 +1,6 @@
 # DevOp Project: Deploying a Dynamic Website on a docker container
 
+![docker flow diagram](https://github.com/yunika-giles/Devops_Projects/blob/main/images/docker.gif)
 ## Project Outline 
 - The Development and Production environment should be separated.
 - In your production environment, run the container in a custom bridge network.
