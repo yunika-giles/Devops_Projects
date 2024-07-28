@@ -1,1 +1,1 @@
-![Devops logo](https://github.com/yunika-giles/Devops_Projects/blob/main/images/devop-logo2.webp)
+![Devops logo](https://github.com/yunika-giles/Devops_Projects/blob/main/images/outils_devops_dis-1028x631.jpeg)
