@@ -1,4 +1,4 @@
-# Deploying a Java-Based Application using CI/CD with GitHub, Jenkins, Maven,SonarQube, Nexus, and Docker
+# Deploying a Java-Based Application using CI/CD with GitHub, Jenkins, Maven, SonarQube, Nexus, and Docker
 ![CI/CD](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/CI%3ACD.gif)
 ## Project Outline
 - Set up the Environment on two Ubuntu Ec2 instances 
@@ -30,9 +30,10 @@ TODO: add more configuration
    + Create a Key pair.
 TODO: add more configuration
 
-If you want to create your infrastructure as code using terraform click [Here]() to access the full template. Endeavour to edit line TODO: with your secret access key and your access key. Then edit line  TODO: with your key pair. 
+If you want to create your `infrastructure as code using terraform` click [Here](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Terraformproject.tf) to access the full template. Endeavour to edit line TODO: with your secret access key and your access key. Then edit line  TODO: with your key pair. 
 
 ## Install CI/CD tools in the Ubuntu instance 
+Click on each of the CI/CD tools to see the installation instructions:
 - [Jenkins](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Jenkins-Installation.md#jenkins-standalone-installation) 
 - [Apache Maven](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Maven.md)
 - [SonarQube](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Sonarqube_installation.md) 
@@ -42,6 +43,7 @@ If you want to create your infrastructure as code using terraform click [Here]()
 ## Setting up Git and Github
 **Install Git**
 To install git, see [git install](https://git-scm.com/downloads) 
+
 **Configure git:**
 ```
 git config --global user.name "your-full-names"
