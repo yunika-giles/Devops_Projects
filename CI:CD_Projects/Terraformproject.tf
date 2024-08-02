@@ -14,8 +14,6 @@ provider "aws" {
   secret_key = "your_secret_key"
 }
 
-
-
 # 1. Create VPC
 resource "aws_vpc" "vpc-demo" {
   cidr_block = "10.0.0.0/16"
@@ -34,7 +32,6 @@ resource "aws_internet_gateway" "gw" {
     Name = "CI/CD-IG"
   }
 }
-
 
 # 3. Create Public Subnet one and two 
 resource "aws_subnet" "Public-subnet1" {
@@ -82,6 +79,7 @@ resource "aws_route_table_association" "b" {
   subnet_id      = aws_subnet.Public-subnet2.id
   route_table_id = aws_route_table.Public-route-table.id
 }
+
 # 5. Create Security Group for Public Webserver one to allow port 80, 22 and all traffic
 resource "aws_security_group" "allow_web" {
   name        = "allow_web_traffic"

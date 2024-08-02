@@ -3,7 +3,7 @@
 ## Project Outline
 - Set up the Environment on two Ubuntu Ec2 instances 
 - Install CI/CD tools in the Ubuntu instance 
-- Set up `Git` anf `GitHub`.
+- Set up `Git` and `GitHub`.
 TODO: add more outlines
 
 ## Setting up the Environment on two Ubuntu EC2 instances
