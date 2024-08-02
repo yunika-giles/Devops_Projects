@@ -17,16 +17,16 @@ If you want to manually create your infrastructure follow the instructions below
 - Create a VPC, internet gateway, Route table, 2 subnets, and Security Groups.
    + Security Groups: Configure security groups to allow HTTP(80), SSH(22), Custom TCP (8080), Custom TCP (9000),Custom TCP (8081).
 - See how to launch an Ubuntu EC2 Instance [Here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/gs-ubuntu.html)
-  + Amazon Machine Image (AMI): Ubuntu 24
-  + instance type: select t2.medium 
+  + Amazon Machine Image (AMI): `Ubuntu 24`
+  + instance type: select `t2.medium` 
   + Create a Key pair.
   + Network settings: select the VPC, subnet and security group you have created.
 TODO: add more configuration
    
 ### Instance Two
 **Instance Configuration:**
-   + Amazon Machine Image (AMI): Ubuntu 22 
-   + Instance type: select t2.medium
+   + Amazon Machine Image (AMI): `Ubuntu 22` 
+   + Instance type: select `t2.medium`
    + Create a Key pair.
 TODO: add more configuration
 
