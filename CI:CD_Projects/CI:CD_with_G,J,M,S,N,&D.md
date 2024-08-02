@@ -18,6 +18,7 @@ If you want to manually create your infrastructure follow the instructions below
 
 Create a VPC, internet gateway, Route table, 2 subnets, and Security Groups.
  + Security Groups: Configure security groups to allow HTTP(80), SSH(22), Custom TCP (8080), Custom TCP (9000),Custom TCP (8081).
+  
 See how to launch an Ubuntu EC2 Instance [Here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/gs-ubuntu.html)
  + Amazon Machine Image (AMI): `Ubuntu 24`
  + instance type: select `t2.medium` 
@@ -57,8 +58,9 @@ Make sure to replace the username and email with your username and email.
 
 **Create an account with github: To create an account in github, see [GitHub Account](https://github.com)**
 
-# Integrate CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
-## Access Jenkins UI:
+# Integrating CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
+### Access Jenkins UI:
+##
 To access the Jenkins UI, open a web browser and type in the IP address of your instance followed by:8080 (e.g., http://54.91.107.144:8080). Replace 54.91.107.144 with the actual IP address of your server.
 
 Unlock Jenkins by using the initial admin password found at:
@@ -72,10 +74,14 @@ Once Jenkins is unlocked, you will be presented with the option to install sugge
 Click `Install suggested plugins` to automatically install a standard set of plugins, which is recommended for most users.
 
 ![jenkins]()
-## Create Your Admin User:
+### Create Your Admin User:
+##
 After plugin installation, you will be prompted to create an admin user for Jenkins.Fill out the form with the username, password, full name, and email address. Click `Save and Continue`
 ![jenkins admin]()
 
 Jenkins will ask you to configure the URL for your Jenkins instance.
 The default URL (based on your server’s IP and port) will be filled in. Click `Start using Jenkins` to complete the setup and be taken to the Jenkins dashboard.
 ![jenkins]()
+
+### Install Necessary Plugins:
+##
