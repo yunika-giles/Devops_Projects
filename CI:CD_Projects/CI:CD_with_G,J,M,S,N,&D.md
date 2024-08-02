@@ -59,6 +59,7 @@ Make sure to replace the username and email with your username and email.
 **Create an account with github: To create an account in github, see [GitHub Account](https://github.com)**
 
 # Integrating CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
+## Setting up Jenkins
 ### Access Jenkins UI:
 ##
 To access the Jenkins UI, open a web browser and type in the IP address of your instance followed by:8080 (e.g., http://54.91.107.144:8080). Replace 54.91.107.144 with the actual IP address of your server.
@@ -85,3 +86,6 @@ The default URL (based on your server’s IP and port) will be filled in. Click 
 
 ### Install Necessary Plugins:
 ##
+In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the TODO: `docker pipeline` and `sonarqube scanner` plugins install them and restart Jenkins if required.
+[jenkins]()
+[jenkins]()
