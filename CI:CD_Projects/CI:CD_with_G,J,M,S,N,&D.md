@@ -87,5 +87,5 @@ The default URL (based on your server’s IP and port) will be filled in. Click 
 ### Install Necessary Plugins:
 ##
 In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the TODO: `docker pipeline` and `sonarqube scanner` plugins install them and restart Jenkins if required.
-[jenkins]()
-[jenkins]()
+![jenkins]()
+![jenkins]()
