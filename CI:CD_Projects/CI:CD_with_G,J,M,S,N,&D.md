@@ -12,8 +12,20 @@ Launch 2 Ubuntu instances and install the necessary tools and software as shown 
  + **Instance one:** Jenkins, Maven, SonarQube, and Java.
  + **Instance two:**  Nexus, and Docker for application deployment.  
   
-To create your `infrastructure as code using terraform` click [Here](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Terraformproject.tf) to access the full template. Endeavour to edit `line 13 and 14` with your access key and your secret access key. Then edit `line 144 and 170` with your key pair. 
+To create your `infrastructure as code using terraform` click [Here](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Terraformproject.tf) to access and download the full template. Open the template using VS code and endeavour to edit `line 13 and 14` with your access key and your secret access key. Then edit `line 144 and 170` with your key pair. Deploy the Terraform template by using the instructions below:
 
+Initialize Terraform by running:
+```python
+terraform init
+```
+Run `terraform plan` to generate an execution plan:
+```python
+terraform plan
+```
+Run `terraform apply` to create the infrastructure on AWS
+```python
+terraform apply
+```
 ## Install CI/CD tools in the Ubuntu instance 
 Click on each of the CI/CD tools to see the installation instructions:
 - [Jenkins](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Jenkins-Installation.md#jenkins-standalone-installation) 
@@ -40,7 +52,7 @@ Make sure to replace the username and email with your username and email.
 ## Integrating CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
 ### Setting up Jenkins
 ##
-#### Access Jenkins UI:
+### Access Jenkins UI:
 
 To access the Jenkins UI, open a web browser and type in the IP address of your instance followed by:8080 (e.g., http://54.91.107.144:8080). Replace 54.91.107.144 with the actual IP address of your server.
 
