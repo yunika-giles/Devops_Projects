@@ -7,11 +7,7 @@
 - Integrate CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
 TODO: add more outlines
 
-## Setting up the Environment on two Ubuntu EC2 instances using terraform
-Launch 2 Ubuntu instances and install the necessary tools and software as shown below:
- + **Instance one:** Jenkins, Maven, SonarQube, and Java.
- + **Instance two:**  Nexus, and Docker for application deployment.  
-  
+## Setting up the Environment on two Ubuntu EC2 instances using terraform 
 To create your `infrastructure as code using terraform` click [Here](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Terraformproject.tf) to access and download the full template. Open the template using VS code and endeavour to edit `line 13 and 14` with your access key and your secret access key. Then edit `line 144 and 170` with your key pair. Deploy the Terraform template by using the instructions below:
 
 Initialize Terraform by running:
@@ -27,6 +23,9 @@ Run `terraform apply` to create the infrastructure on AWS
 terraform apply
 ```
 ## Install CI/CD tools in the Ubuntu instance 
+Partition the CI/CD tool in the two ubuntu instance as shown below:
+ + **Instance one(Jenkins-Instance):** Jenkins, Maven, SonarQube, and Java.
+ + **Instance two(Docker-instance):**  Nexus, and Docker for application deployment.  
 Click on each of the CI/CD tools to see the installation instructions:
 - [Jenkins](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Jenkins-Installation.md#jenkins-standalone-installation) 
 - [Apache Maven](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Maven.md)
