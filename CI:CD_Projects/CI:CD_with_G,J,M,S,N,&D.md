@@ -8,27 +8,28 @@
 TODO: add more outlines
 
 # Setting up the Environment on two Ubuntu EC2 instances
-- Launch 2 Ubuntu instances and install the necessary tools and software as shown below:
-  + **Instance one:** Jenkins, Maven, SonarQube, and Java.
-  + **Instance two:**  Nexus, and Docker for application deployment.  
+Launch 2 Ubuntu instances and install the necessary tools and software as shown below:
+ + **Instance one:** Jenkins, Maven, SonarQube, and Java.
+ + **Instance two:**  Nexus, and Docker for application deployment.  
 
 If you want to manually create your infrastructure follow the instructions below:
 ## Instance One
 **Instance Configuration:** 
-- Create a VPC, internet gateway, Route table, 2 subnets, and Security Groups.
-   + Security Groups: Configure security groups to allow HTTP(80), SSH(22), Custom TCP (8080), Custom TCP (9000),Custom TCP (8081).
-- See how to launch an Ubuntu EC2 Instance [Here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/gs-ubuntu.html)
-  + Amazon Machine Image (AMI): `Ubuntu 24`
-  + instance type: select `t2.medium` 
-  + Create a Key pair.
-  + Network settings: select the VPC, subnet and security group you have created.
+
+Create a VPC, internet gateway, Route table, 2 subnets, and Security Groups.
+ + Security Groups: Configure security groups to allow HTTP(80), SSH(22), Custom TCP (8080), Custom TCP (9000),Custom TCP (8081).
+See how to launch an Ubuntu EC2 Instance [Here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/gs-ubuntu.html)
+ + Amazon Machine Image (AMI): `Ubuntu 24`
+ + instance type: select `t2.medium` 
+ + Create a Key pair.
+ + Network settings: select the VPC, subnet and security group you have created.
 TODO: add more configuration
    
 ## Instance Two
 **Instance Configuration:**
-   + Amazon Machine Image (AMI): `Ubuntu 22` 
-   + Instance type: select `t2.medium`
-   + Create a Key pair.
+ + Amazon Machine Image (AMI): `Ubuntu 22` 
+ + Instance type: select `t2.medium`
+ + Create a Key pair.
 TODO: add more configuration
 
 If you want to create your `infrastructure as code using terraform` click [Here](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Terraformproject.tf) to access the full template. Endeavour to edit `line 13 and 14` with your access key and your secret access key. Then edit `line 144 and 170` with your key pair. 
