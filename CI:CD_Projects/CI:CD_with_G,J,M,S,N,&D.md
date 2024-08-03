@@ -23,7 +23,7 @@ Run `terraform apply` to create the infrastructure on AWS
 terraform apply
 ```
 ## Install CI/CD tools in the Ubuntu instance 
-Partition the CI/CD tool  base on installation in the two ubuntu instance as shown below:
+Partition the CI/CD tools in the two ubuntu instance as shown below:
  + **Instance one(Jenkins-Instance):** Jenkins, Maven, SonarQube, and Java.
  + **Instance two(Docker-instance):**  Nexus, and Docker for application deployment.
     
