@@ -61,6 +61,7 @@ Unlock Jenkins by using the initial admin password found at:
 ```python
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
+
 ![jenkins login picture](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/SCR-20240803-jllw.png)
 
 Once Jenkins is unlocked, you will be presented with the option to install suggested plugins or to select specific plugins manually.
@@ -68,15 +69,19 @@ Click `Install suggested plugins` to automatically install a standard set of plu
 
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenk.png)
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenki.png)
+
 ### Create Your Admin User:
 After plugin installation, you will be prompted to create an admin user for Jenkins.Fill out the form with the username, password, full name, and email address. Click `Save and Continue`
+
 ![jenkins admin](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins.png)
 
 Jenkins will ask you to configure the URL for your Jenkins instance.
 The default URL (based on your server’s IP and port) will be filled in. Click `Start using Jenkins` to complete the setup and be taken to the Jenkins dashboard.
+
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins1.png)
 
 ### Install Necessary Plugins:
 In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the TODO: `docker pipeline` and `sonarqube scanner` plugins install them and restart Jenkins if required.
+
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins2.png)
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins3.png)
