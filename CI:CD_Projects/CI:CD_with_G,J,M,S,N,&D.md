@@ -61,7 +61,7 @@ Unlock Jenkins by using the initial admin password found at:
 ```python
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
-[jenkins login picture](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/SCR-20240803-jllw.png)
+![jenkins login picture](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/SCR-20240803-jllw.png)
 
 Once Jenkins is unlocked, you will be presented with the option to install suggested plugins or to select specific plugins manually.
 Click `Install suggested plugins` to automatically install a standard set of plugins, which is recommended for most users.
