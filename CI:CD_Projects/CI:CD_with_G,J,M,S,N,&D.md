@@ -1,11 +1,26 @@
 # Deploying a Java-Based Application using CI/CD with GitHub, Jenkins, Maven, SonarQube, Nexus, and Docker
 ![CI/CD](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/CI%3ACD.gif)
 ## Project Outline
+- Set up `Git` and `GitHub`.
 - Set up the Environment on two Ubuntu Ec2 instances 
 - Install CI/CD tools in the Ubuntu instance 
-- Set up `Git` and `GitHub`.
 - Integrate CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
 TODO: add more outlines
+
+## Setting up Git and Github
+**Install Git**
+To install git, see [git install](https://git-scm.com/downloads) 
+
+**Configure git:**
+```
+git config --global user.name "your-full-names"
+```
+```
+git config --global user.email "gitHubEmail"
+```
+Make sure to replace the username and email with your username and email.
+
+**Create an account with github: To create an account in github, see [GitHub Account](https://github.com)**
 
 ## Setting up the Environment on two Ubuntu EC2 instances using terraform 
 To create your `infrastructure as code using terraform` click [Here](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Terraformproject.tf) to access and download the full template. Open the template using VS code and endeavour to edit `line 13 and 14` with your access key and your secret access key. Then edit `line 144 and 170` with your key pair. Deploy the Terraform template by using the instructions below:
@@ -34,20 +49,6 @@ Click on each of the CI/CD tools to see the installation instructions:
 - [Sonartype Nexus](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Nexus_installation.md) 
 - [Docker](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/docker_install.md) 
 
-## Setting up Git and Github
-**Install Git**
-To install git, see [git install](https://git-scm.com/downloads) 
-
-**Configure git:**
-```
-git config --global user.name "your-full-names"
-```
-```
-git config --global user.email "gitHubEmail"
-```
-Make sure to replace the username and email with your username and email.
-
-**Create an account with github: To create an account in github, see [GitHub Account](https://github.com)**
 
 ## Integrating CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
 ### Setting up Jenkins
@@ -81,7 +82,7 @@ The default URL (based on your server’s IP and port) will be filled in. Click 
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins1.png)
 
 ### Install Necessary Plugins:
-In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the TODO: `docker pipeline` and `sonarqube scanner` plugins install them and restart Jenkins if required.
+In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the `sonarQube scanner`, and ` Nexus Artifact Uploader`plugins install them and restart Jenkins if required.
 
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins2.png)
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins3.png)
