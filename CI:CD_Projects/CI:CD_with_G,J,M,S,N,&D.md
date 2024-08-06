@@ -12,15 +12,20 @@ TODO: add more outlines
 To install git, see [git install](https://git-scm.com/downloads) 
 
 **Configure git:**
-```
+```python
 git config --global user.name "your-full-names"
 ```
-```
+```python
 git config --global user.email "gitHubEmail"
 ```
 Make sure to replace the username and email with your username and email.
 
 **Create an account with github: To create an account in github, see [GitHub Account](https://github.com)**
+
+Clone the Project on github.com by running this command:
+```python
+git clone https://github.com/yunika-giles/init-app.git
+```
 
 ## Setting up the Environment on two Ubuntu EC2 instances using terraform 
 To create your `infrastructure as code using terraform` click [Here](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Terraformproject.tf) to access and download the full template. Open the template using VS code and endeavour to edit `line 13 and 14` with your access key and your secret access key. Then edit `line 144 and 170` with your key pair. Deploy the Terraform template by using the instructions below:
