@@ -22,7 +22,7 @@ Make sure to replace the username and email with your username and email.
 
 **Create an account with github: To create an account in github, see [GitHub Account](https://github.com)**
 
-Clone the Project on github.com by running this command:
+Clone the Project on `Github` by running this command:
 ```python
 git clone https://github.com/yunika-giles/init-app.git
 ```
