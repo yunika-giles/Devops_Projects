@@ -22,7 +22,7 @@ Make sure to replace the username and email with your username and email.
 
 **Create an account with github: To create an account in github, see [GitHub Account](https://github.com)**
 
-open your terminal. Change to the directory where you wish to clone the repository. Clone the Project on `Github` by running this command:
+Open your terminal, navigate to the directory where you want to clone the repository. Clone the project from `GitHub` by running this command:
 
 ```python
 git clone https://github.com/yunika-giles/init-app.git
@@ -45,11 +45,11 @@ terraform apply
 ```
 ## Install CI/CD tools in the Ubuntu instance 
 Partition the CI/CD tools in the two ubuntu instance as shown below:
- + **Instance one(Jenkins-Instance):** Jenkins, Maven, SonarQube, and Java.
+ + **Instance one(Jenkins-Instance):** Jenkins, Maven, SonarQube, Java, and Docker.
  + **Instance two(Docker-instance):**  Nexus, and Docker for application deployment.
     
 Click on each of the CI/CD tools to see the installation instructions:
-- [Jenkins](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Jenkins-Installation.md#jenkins-standalone-installation) 
+- [Jenkins](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/jenkins_install.md) 
 - [Apache Maven](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Maven.md)
 - [SonarQube](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Sonarqube_installation.md) 
 - [Sonartype Nexus](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Nexus_installation.md) 
@@ -92,3 +92,5 @@ In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the
 
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins2.png)
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins3.png)
+
+## Jenkins GitHub Integrations
