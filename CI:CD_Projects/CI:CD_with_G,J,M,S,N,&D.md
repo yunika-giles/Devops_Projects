@@ -95,3 +95,17 @@ In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins3.png)
 
 ## Jenkins GitHub Integrations
+In Jenkins navigate to `Dashboard` and create a new project `(+ New Item)`.
+![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen.png)
+
+Enter the desired project name and select `Freestyle project`. Then, click `OK`.
+
+![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen1.png)
+
+Under  `Source Code Management` section. 
+- Select `Git` 
+- In the Repository URL field, paste your `GitHub project URL`.
+- 
+![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen2.png)
+
+
