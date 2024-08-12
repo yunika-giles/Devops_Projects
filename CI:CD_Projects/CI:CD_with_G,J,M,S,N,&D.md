@@ -102,10 +102,32 @@ Enter the desired project name and select `Freestyle project`. Then, click `OK`.
 
 ![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen1.png)
 
+In the project configuration page, check the `GitHub project` box. In the Project URL field, paste your `GitHub project URL`
+
+![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen0.png)
+
 Under  `Source Code Management` section. 
 - Select `Git` 
-- In the Repository URL field, paste your `GitHub project URL`.
-- 
-![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen2.png)
+- Copy your `GitHub repository URL` and paste it into the `Repository URL` field.
+- Under `Credentials`, select `+Add` then `Jenkins`
+![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jenkins2.png)
 
+In the `Jenkins Credentials Provider` page, fill in the credentials as follows:
+- Leave `Domain`, `Kind` and `Scope` as default.
+- Under `username`, input your `jenkins username` and `password`.
+- Under `ID`, input your `identifier`.
+- Input your description and select `Add`.
+  
+![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen3.png)
 
+Now Under `Credentials` replace `-none-` with your credentials.
+
+![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen4.png)
+
+Under `Branches to build` input the branch you want to build from. then click on the `save` button.
+
+![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen5.png)
+
+Select `Build Now`.
+
+## Jenkins Maven Integrations
