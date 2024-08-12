@@ -45,15 +45,16 @@ terraform apply
 ```
 ## Install CI/CD tools in the Ubuntu instance 
 Partition the CI/CD tools in the two ubuntu instance as shown below:
- + **Instance one(Jenkins-Instance):** Jenkins, Maven, SonarQube, Java, and Docker.
+ + **Instance one(Jenkins-Instance):** Jenkins, Maven, SonarQube, and Java,.
  + **Instance two(Docker-instance):**  Nexus, and Docker for application deployment.
     
 Click on each of the CI/CD tools to see the installation instructions:
 - [Jenkins](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/jenkins_install.md) 
-- [Apache Maven](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Maven.md)
-- [SonarQube](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Sonarqube_installation.md) 
-- [Sonartype Nexus](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Nexus_installation.md) 
+- [Apache Maven](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/maven_install.md)
+- [SonarQube](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/sonarqube_install.md) 
 - [Docker](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/docker_install.md) 
+- [Sonartype Nexus](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Nexus_installation.md) 
+  
 
 
 ## Integrating CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
