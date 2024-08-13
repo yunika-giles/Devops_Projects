@@ -2,7 +2,7 @@
 ![CI/CD](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/CI%3ACD.gif)
 ## Project Outline
 - Set up `Git` and `GitHub`.
-- Set up the Environment on two Ubuntu Ec2 instances using terraform
+- Set up the infrastructure using Terraform on two Ubuntu EC2 instances 
 - Install CI/CD tools in the Ubuntu instance 
 - Integrate CI/CD tools (GitHub, Maven, Sonarqube, nexus and docker) with Jenkins 
 TODO: add more outlines
@@ -28,7 +28,7 @@ Open your terminal, navigate to the directory where you want to clone the reposi
 git clone https://github.com/yunika-giles/init-app.git
 ```
 
-## Setting up the Environment on two Ubuntu EC2 instances using terraform 
+## Setting up the infrastructure using Terraform on two Ubuntu EC2 instances 
 To create your `infrastructure as code using terraform` click [Here](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Terraformproject.tf) to access and download the full template. Open the template using VS code and endeavour to edit `line 13 and 14` with your access key and your secret access key. Then edit `line 144 and 170` with your key pair. Deploy the Terraform template by using the instructions below:
 
 Initialize Terraform by running:
