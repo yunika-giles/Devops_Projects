@@ -149,11 +149,14 @@ Access SonarQube by entering `http://<your_instance_ip>:9000` in your browser, r
 - Password: `admin`
 However, it’s recommended to change these default credentials after the initial setup for security reasons.
 
-![son-jen]()
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/Son-jen.png)
 In SonarQube, generate a token by following these steps:
 - Go to `Administration` > `Security` > `Users`
 - Click on `Token`
 - Enter a token name and select a `duration`
 - Click `Generate`
+- `Copy` Token and Backup for you won't be able to see or copy it again.
   
-![son-jen]()
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/son-jen1.png)
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/son-jen2.png)
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/son-jen3.png)
