@@ -96,6 +96,7 @@ In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the
 
 ## Jenkins GitHub Integrations
 In Jenkins navigate to `Dashboard` and create a new project `(+ New Item)`.
+
 ![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen.png)
 
 Enter the desired project name and select `Freestyle project`. Then, click `OK`.
@@ -110,6 +111,7 @@ Under  `Source Code Management` section.
 - Select `Git` 
 - Copy your `GitHub repository URL` and paste it into the `Repository URL` field.
 - Under `Credentials`, select `+Add` then `Jenkins`
+  
 ![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jenkins2.png)
 
 In the `Jenkins Credentials Provider` page, fill in the credentials as follows:
@@ -140,3 +142,18 @@ In Jenkins, navigate to the `Dashboard`, select `Manage Jenkins`, and then click
 In Jenkins, go to the `Dashboard`, select your project (e.g., `init-app`), and then click on `Configure`. In the project configuration page, click on `Build Steps`. Under `Build Steps`, click on `Add build step` and select `Invoke top-level Maven targets`. In the `Maven Version` dropdown, select the Maven version you added in the previous step. In the `Goals` field, enter the Maven goals you want to execute (e.g., `clean package`). Click `Save` to save your changes. Then click on `Build Now`.
 
 ![mav-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/maven-jen1.png)
+
+## Jenkins SonarQube Integrations (Code Quality) 
+Access SonarQube by entering `http://<your_instance_ip>:9000` in your browser, replacing `<your_instance_ip>` with your server's IP address.The default login credentials for SonarQube are:
+- Username: `admin`
+- Password: `admin`
+However, it’s recommended to change these default credentials after the initial setup for security reasons.
+
+![son-jen]()
+In SonarQube, generate a token by following these steps:
+- Go to `Administration` > `Security` > `Users`
+- Click on `Token`
+- Enter a token name and select a `duration`
+- Click `Generate`
+  
+![son-jen]()
