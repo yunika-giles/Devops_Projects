@@ -139,10 +139,11 @@ In Jenkins, navigate to the `Dashboard`, select `Manage Jenkins`, and then click
 ![mav-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/mav-jen.png)
 
 
-In Jenkins, go to the `Dashboard`, select your project (e.g., `init-app`), and then click on `Configure`. In the project configuration page, click on `Build Steps`. Under `Build Steps`, click on `Add build step` and select `Invoke top-level Maven targets`. In the `Maven Version` dropdown, select the Maven version you added in the previous step. In the `Goals` field, enter the Maven goals you want to execute (e.g., `clean package`). Click `Save` to save your changes. Then click on `Build Now`.
+In Jenkins, go to the `Dashboard`, select your project (e.g., `init-app`), and then click on `Configure`. In the project configuration page, click on `Build Steps`. Under `Build Steps`, click on `Add build step` and select `Invoke top-level Maven targets`. In the `Maven Version` dropdown, select the Maven version you added in the previous step. In the `Goals` field, enter the Maven goals you want to execute (e.g., `clean package`). Click `Save` to save your changes. 
 
 ![mav-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/maven-jen1.png)
 
+Then click on `Build Now`.
 ## Jenkins SonarQube Integrations (Code Quality) 
 Access SonarQube by entering `http://<your_instance_ip>:9000` in your browser, replacing `<your_instance_ip>` with your server's IP address.The default login credentials for SonarQube are:
 - Username: `admin`
@@ -162,3 +163,33 @@ In SonarQube, generate a token by following these steps:
 ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/son-jen3.png)
 
 In your project's code repository in GitHub, navigate to the build script (pom.xml) and locate the `<properties>` tag. Add or edit the following properties within this tag:
+
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/son-jen4.png)
+
+After making changes `save` and Commit the changes.
+
+**Configure SonarQube in Jenkins by following these steps:**
+
+- Navigate to Dashboard > Manage Jenkins > System.
+- Scroll down to `SonarQube Servers` and click `Add SonarQube`.
+- Check `Environmental Variables` box and input the following:
+    + Name: [your-name]
+    + Server URL: [your-server-URL, e.g.,` http://<InstanceIP>:9000`]
+- Server authentication token: Create a new token by clicking the `+Add` button below.
+    + Jenkins `Domain`: leave as default
+    + `Kind`: Secret text
+    + `Scope`: leave as default
+    + `Secret`: [your-sonarqube-token]
+    + `ID`: [your-ID, e.g., jenkins-sonar-cred]
+    + `Description`: [your-Description, e.g., jenkins-sonar-cred]   
+- Click `Add`,
+- Select what you just created and then `Save`.
+
+**Next, configure your project to run SonarQube analysis:**
+
+- Go to Dashboard > yourProject > Configure.
+- In the Build Steps section, click `Add Build Step` and select `Invoke-top-level Maven Targets`.
+- Under `Maven Version`, select your preconfigured Maven version.
+- Under 'Goal', enter `sonar:sonar`.
+- Click `Save` and then `Build Now` to run the job.
+  
