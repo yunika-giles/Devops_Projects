@@ -160,3 +160,5 @@ In SonarQube, generate a token by following these steps:
 ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/son-jen1.png)
 ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/son-jen2.png)
 ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/son-jen3.png)
+
+In your project's code repository in GitHub, navigate to the build script (pom.xml) and locate the `<properties>` tag. Add or edit the following properties within this tag:
