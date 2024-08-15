@@ -183,7 +183,15 @@ After making changes `save` and Commit the changes.
     + `ID`: [your-ID, e.g., jenkins-sonar-cred]
     + `Description`: [your-Description, e.g., jenkins-sonar-cred]   
 - Click `Add`,
-- Select what you just created and then `Save`.
+
+  
+  ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen5.png)
+  ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen6.png)
+  ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen7.png)
+  
+  - Select what you just created and then `Save`.
+
+  ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen8.png)
 
 **Next, configure your project to run SonarQube analysis:**
 
@@ -193,3 +201,5 @@ After making changes `save` and Commit the changes.
 - Under 'Goal', enter `sonar:sonar`.
 - Click `Save` and then `Build Now` to run the job.
   
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-%20jen9.png)
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen10.png)
