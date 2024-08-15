@@ -184,14 +184,13 @@ After making changes `save` and Commit the changes.
     + `Description`: [your-Description, e.g., jenkins-sonar-cred]   
 - Click `Add`,
 
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen5.png)
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen6.png)
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen7.png)
   
-  ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen5.png)
-  ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen6.png)
-  ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen7.png)
-  
-  - Select what you just created and then `Save`.
+- Select what you just created and then `Save`.
 
-  ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen8.png)
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen8.png)
 
 **Next, configure your project to run SonarQube analysis:**
 
@@ -203,3 +202,5 @@ After making changes `save` and Commit the changes.
   
 ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-%20jen9.png)
 ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen10.png)
+
+## Jenkins Nexus Integrations (Artifact Backup) 
