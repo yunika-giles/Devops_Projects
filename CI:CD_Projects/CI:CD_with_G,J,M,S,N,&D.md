@@ -204,3 +204,28 @@ After making changes `save` and Commit the changes.
 ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen10.png)
 
 ## Jenkins Nexus Integrations (Artifact Backup) 
+Access SonarQube by entering `http://<your_instance_ip>:8081` in your browser, replacing <your_instance_ip> with your server's IP address. The default login credentials for Nexus are:
+- Username: `admin`
+- Default password path: `/nexus-data/admin.password` you can obtain the admin password by executing the following command in the terminal where Docker is running:
+```python
+docker exec -it <container_name> cat /nexus-data/admin.password
+```
+Replace <container_name> with the actual name of your Nexus container. This command will display the admin password in the terminal.
+
+![nex-jen]()
+
+To configure Nexus, follow these steps:
+
+- Log in to Nexus and navigate to `Server Administration and Configuration` (represented by a gear icon).
+- Click on `Repositories` and then `Create Repository`.
+- Select `Maven2` (Hosted) and fill in the details:
+    - Name: [your-repository-name]
+    - Version Policy: `Release`
+    - Layout Policy: `Strict`
+    - Content Disposition: `Inline`
+    - Blob Store: `default`
+    - Deployment Policy: `Allow Redeploy`
+- Click Create Repository to save your changes.
+- Repeat the process to create a second repository, using the same steps but with one change:
+    - Version Policy: Snapshot (instead of Release)
+- This will set up two separate repositories in Nexus, one for `releases` and one for `snapshots`.
