@@ -218,6 +218,7 @@ To configure Nexus, follow these steps:
 
 - Log in to Nexus and navigate to `Server Administration and Configuration` (represented by a gear icon).
 - Click on `Repositories` and then `Create Repository`.
+  
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen1.png)
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen1.0.png)
 - Select `Maven2` (Hosted) and fill in the details:
@@ -228,8 +229,21 @@ To configure Nexus, follow these steps:
     - Blob Store: `default`
     - Deployment Policy: `Allow Redeploy`
 - Click Create Repository to save your changes.
+  
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen2.png)
 - Repeat the process to create a second repository, using the same steps but with one change:
     - Version Policy: Snapshot (instead of Release)
 - This will set up two separate repositories in Nexus, one for `releases` and one for `snapshots`.
+  
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen3.png)
+
+To configure your pom.xml file in your github repository, follow these steps:
+
+1. Open the pom.xml file in your github repository.
+2. Locate the `<distributionManagement>` section.
+3. Update the following elements:
+    - `id`: Enter the repository name you created in Nexus, suffixed with "-snapshot".
+    - `name`: Enter the same Nexus snapshot repository name.
+    - `url`: Enter the URL of the snapshot repository.
+
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen3.png)
