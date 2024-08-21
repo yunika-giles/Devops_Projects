@@ -239,11 +239,13 @@ To configure Nexus, follow these steps:
 
 To configure your pom.xml file in your github repository, follow these steps:
 
-1. Open the pom.xml file in your github repository.
-2. Locate the `<distributionManagement>` section.
-3. Update the following elements:
+`1` Open the pom.xml file in your github repository.
+`2` Locate the `<distributionManagement>` section.
+`3` Update the following elements:
     - `id`: Enter the repository name you created in Nexus, suffixed with "-snapshot".
     - `name`: Enter the same Nexus snapshot repository name.
     - `url`: Enter the URL of the snapshot repository.
 
-![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen3.png)
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen4.png)
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nexus-jen5.png)
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen6.png)
