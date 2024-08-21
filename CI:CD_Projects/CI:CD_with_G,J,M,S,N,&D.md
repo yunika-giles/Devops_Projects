@@ -214,7 +214,7 @@ Replace <container_name> with the actual name of your Nexus container. This comm
 
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen.png)
 
-To configure Nexus, follow these steps:
+To configure Nexus, follow these steps: 
 
 - Log in to Nexus and navigate to `Server Administration and Configuration` (represented by a gear icon).
 - Click on `Repositories` and then `Create Repository`.
