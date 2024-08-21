@@ -212,7 +212,7 @@ docker exec -it <container_name> cat /nexus-data/admin.password
 ```
 Replace <container_name> with the actual name of your Nexus container. This command will display the admin password in the terminal.
 
-![nex-jen]()
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen.png)
 
 To configure Nexus, follow these steps:
 
