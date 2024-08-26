@@ -239,9 +239,9 @@ To configure Nexus, follow these steps:
 
 To configure your pom.xml file in your github repository, follow these steps:
 
-`1` Open the pom.xml file in your github repository.
-`2` Locate the `<distributionManagement>` section.
-`3` Update the following elements:
+1. Open the pom.xml file in your github repository.
+2. Locate the `<distributionManagement>` section.
+3. Update the following elements:
     - `id`: Enter the repository name you created in Nexus, suffixed with "-snapshot".
     - `name`: Enter the same Nexus snapshot repository name.
     - `url`: Enter the URL of the snapshot repository.
@@ -249,3 +249,32 @@ To configure your pom.xml file in your github repository, follow these steps:
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen4.png)
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nexus-jen5.png)
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen6.png)
+
+After making changes `save` and Commit the changes.
+
+Set up Jenkins for your project by following these steps:
+
+1. Access your project's configuration: Project(init-app) > Configure > Build Steps
+2. Add a new build step: Nexus Artifact Uploader
+3. Enter the Nexus details:
+    - Version: NEXUS3
+    - Protocol: HTTP
+    - URL: your Nexus URL (without `http/https`, e.g., `<instanceIP>:8081`)
+    - Credentials: use the credentials configured in Nexus for the `web application`
+    - GroupId: your project name (e.g., `init-app`)
+    - Version: your version number (e.g., `1.0-SNAPSHOT`)
+    - Repository: select the repository created in Nexus (e.g., `init-app-snapshot`)
+4. Add artifacts:
+    - ArtifactId: your ID (subfolder inside your GroupId, e.g., `init-app-v1.0.0`)
+    - Type: `war`
+    - Classifier: leave blank
+    - File: enter the complete link to your `.war file` on your backend. 
+    - Default link could be found in: `/var/lib/jenkins/`(e.g., /var/lib/jenkins/workspace/your-project-name/target/vin-app-v1.0.0.war)
+5. Save the changes and click 'Build Now' to execute the build process.
+
+To find your default Jenkins directory:
+
+1. Go to the Dashboard
+2. Click on 'System'
+
+
