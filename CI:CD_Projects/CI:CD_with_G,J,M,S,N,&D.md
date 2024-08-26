@@ -53,7 +53,7 @@ Click on each of the CI/CD tools to see the installation instructions:
 - [Apache Maven](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/maven_install.md)
 - [SonarQube](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/sonarqube_install.md) 
 - [Docker](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/docker_install.md) 
-- [Sonartype Nexus](https://github.com/yunika-giles/Giles-Workspace/blob/main/server_installation/Nexus_installation.md) 
+- [Sonartype Nexus](https://github.com/yunika-giles/Giles-Workspace/blob/main/bash_scripts/nexus_installation.md) 
   
 
 
@@ -252,9 +252,9 @@ To configure your pom.xml file in your github repository, follow these steps:
 
 After making changes `save` and Commit the changes.
 
-Set up Jenkins for your project by following these steps:
+**Set up Jenkins for your project by following these steps:**
 
-1. Access your project's configuration: Project(init-app) > Configure > Build Steps
+1. Access your project's configuration: `Project(init-app)` > `Configure` > `Build Steps`
 2. Add a new build step: Nexus Artifact Uploader
 3. Enter the Nexus details:
     - Version: NEXUS3
@@ -270,11 +270,10 @@ Set up Jenkins for your project by following these steps:
     - Classifier: leave blank
     - File: enter the complete link to your `.war file` on your backend. 
     - Default link could be found in: `/var/lib/jenkins/`(e.g., /var/lib/jenkins/workspace/your-project-name/target/vin-app-v1.0.0.war)
-5. Save the changes and click 'Build Now' to execute the build process.
+5. Save the changes and click `Build Now` to execute the build process.
 
 To find your default Jenkins directory:
 
 1. Go to the Dashboard
-2. Click on 'System'
-
+2. Click on `System`
 
