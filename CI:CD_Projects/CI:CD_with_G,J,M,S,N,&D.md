@@ -255,8 +255,10 @@ After making changes `save` and Commit the changes.
 **Set up Jenkins for your project by following these steps:**
 
 1. Access your project's configuration: `Project(init-app)` > `Configure` > `Build Steps`
-2. Add a new build step: Nexus Artifact Uploader
-3. Enter the Nexus details:
+2. Add a new build step: `Nexus Artifact Uploader`
+
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen7.png)
+1. Enter the Nexus details:
     - Version: NEXUS3
     - Protocol: HTTP
     - URL: your Nexus URL (without `http/https`, e.g., `<instanceIP>:8081`)
@@ -264,16 +266,109 @@ After making changes `save` and Commit the changes.
     - GroupId: your project name (e.g., `init-app`)
     - Version: your version number (e.g., `1.0-SNAPSHOT`)
     - Repository: select the repository created in Nexus (e.g., `init-app-snapshot`)
-4. Add artifacts:
+
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen8.png)
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen9.png)
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen10.png)
+
+1. Add artifacts:
     - ArtifactId: your ID (subfolder inside your GroupId, e.g., `init-app-v1.0.0`)
     - Type: `war`
     - Classifier: leave blank
     - File: enter the complete link to your `.war file` on your backend. 
     - Default link could be found in: `/var/lib/jenkins/`(e.g., /var/lib/jenkins/workspace/your-project-name/target/vin-app-v1.0.0.war)
-5. Save the changes and click `Build Now` to execute the build process.
-
+2. Save the changes and click `Build Now` to execute the build process.
+TODO: ![nex-jen]()
 To find your default Jenkins directory:
 
 1. Go to the Dashboard
 2. Click on `System`
 
+## Jenkins Docker Integrations 
+1. Go to the Dashboard and click on `+ New Item`.
+2. Enter your job name, select `Pipeline`, and click `OK`.
+3. In the `Configure` section, add a description under `General`.
+4. Set the `Discard old builds` option and choose the maximum number of builds to keep.
+5. Select `Pipeline` on the left panel, and under `Definition`, choose `Pipeline script`. 
+6. Edit 
+```python
+pipeline {
+    agent { 
+
+    environment {
+        GITHUB_REPO_URL = 'Paste your GitHub repo'
+        BRANCH_NAME = 'main'  // Replace with your branch name if it's not 'main'
+        GITHUB_CREDENTIALS_ID = 'Paste GitHub-token'  // Replace with your Jenkins GitHub credentials ID
+        DOCKERHUB_CREDENTIALS_ID = 'dockerhub'  // Replace with your Jenkins Docker Hub credentials ID
+        DOCKERHUB_REPO = 'Paste your Docker repo'  // Replace with your Docker Hub repository
+    }
+
+    stages {
+        stage('Agent Details') {
+            steps {
+                echo "Running on agent: ${env.NODE_NAME}"
+                sh 'uname -a'  // Print system information
+                sh 'whoami'    // Print the current user
+            }
+        }
+
+        stage('Clone Repository') {
+            steps {
+                git branch: "${env.BRANCH_NAME}", url: "${env.GITHUB_REPO_URL}", credentialsId: "${env.GITHUB_CREDENTIALS_ID}"
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'  // Simple Maven build
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                script {
+                    sh 'docker --version'  // Verify Docker installation
+                    sh "docker build -t ${env.DOCKERHUB_REPO}:latest ."  // Build Docker image
+                }
+            }
+        }
+
+        stage('Docker Push') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: "${env.DOCKERHUB_CREDENTIALS_ID}", usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                        sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+                        sh "docker push ${env.DOCKERHUB_REPO}:latest"
+                        sh 'docker logout'
+                    }
+                }
+            }
+        }
+
+        stage('Run Docker Container') {
+            steps {
+                script {
+                    sh "docker run --name init-con --rm -d -p 8090:8080 ${env.DOCKERHUB_REPO}:latest"  // Run Docker container in detached mode
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up Docker containers and images...'
+            sh 'docker rm $(docker ps -a -q) || true'
+            sh 'docker rmi $(docker images -q) || true'
+        }
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+    }
+}
+```
+7. Paste your script in the provided area, click `Save`, and then `Build Now`.
+   
