@@ -285,6 +285,8 @@ After making changes `save` and Commit the changes.
 ## Jenkins Docker Integrations 
 1. Go to the Dashboard and click on `+ New Item`.
 2. Enter your job name, select `Pipeline`, and click `OK`.
+
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/doc-jen.png)
 3. In the `Configure` section, add a description under `General`.
 4. Set the `Discard old builds` option and choose the maximum number of builds to keep.
 5. Select `Pipeline` on the left panel, and under `Definition`, choose `Pipeline script`. 
@@ -368,5 +370,5 @@ pipeline {
     }
 }
 ```
-7. Paste your script in the provided area, click `Save`, and then `Build Now`.
+1. Paste your script in the provided area, click `Save`, and then `Build Now`.
    
