@@ -89,7 +89,7 @@ The default URL (based on your server’s IP and port) will be filled in. Click 
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins1.png)
 
 ### Install Necessary Plugins:
-In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ look for the `sonarQube scanner`, and ` Nexus Artifact Uploader`plugins install them and restart Jenkins if required.
+In Jenkins navigate to _Manage Jenkins > Plugins_. Under _Plugins _ Click on `available plugins` look for the `sonarQube scanner`, and ` Nexus Artifact Uploader`plugins install them and restart Jenkins if required.
 
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins2.png)
 ![jenkins](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/jenkins3.png)
@@ -134,7 +134,7 @@ Select `Build Now`.
 
 ![git-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/git-jen6.png)
 ## Jenkins Maven Integrations
-In Jenkins, navigate to the `Dashboard`, select `Manage Jenkins`, and then click on `Tools`. Scroll down to the `Maven` section and click the `Add Maven` button. 
+In Jenkins, navigate to the `Dashboard`, select `Manage Jenkins`, and then click on `Tools`. Scroll down to the `Maven` section and click the `Add Maven` button. Fill in the `Name` select the latest version of maven and then click the `save` button
 
 ![mav-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/mav-jen.png)
 
@@ -170,7 +170,7 @@ After making changes `save` and Commit the changes.
 
 **Configure SonarQube in Jenkins by following these steps:**
 
-- Navigate to Dashboard > Manage Jenkins > System.
+- Navigate to `Dashboard` > `Manage Jenkins` > `System`.
 - Scroll down to `SonarQube Servers` and click `Add SonarQube`.
 - Check `Environmental Variables` box and input the following:
     + Name: [your-name]
@@ -194,14 +194,14 @@ After making changes `save` and Commit the changes.
 
 **Next, configure your project to run SonarQube analysis:**
 
-- Go to Dashboard > yourProject > Configure.
+- Go to `Dashboard` > `yourProject` > `Configure`.
 - In the Build Steps section, click `Add Build Step` and select `Invoke-top-level Maven Targets`.
 - Under `Maven Version`, select your preconfigured Maven version.
 - Under 'Goal', enter `sonar:sonar`.
 - Click `Save` and then `Build Now` to run the job.
   
 ![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-%20jen9.png)
-![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen10.png)
+![son-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/sonar-jen10.png) 
 
 ## Jenkins Nexus Integrations (Artifact Backup) 
 Access SonarQube by entering `http://<your_instance_ip>:8081` in your browser, replacing <your_instance_ip> with your server's IP address. The default login credentials for Nexus are:
@@ -221,7 +221,7 @@ To configure Nexus, follow these steps:
   
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen1.png)
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen1.0.png)
-- Select `Maven2` (Hosted) and fill in the details:
+- Select `Maven2(hosted)` and fill in the details:
     - Name: [your-repository-name]
     - Version Policy: `Release`
     - Layout Policy: `Strict`
@@ -231,7 +231,7 @@ To configure Nexus, follow these steps:
 - Click Create Repository to save your changes.
   
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen2.png)
-- Repeat the process to create a second repository, using the same steps but with one change:
+- Repeat the process to create a second repository (e.g `init-app-snapshot`), using the same steps but with one change:
     - Version Policy: Snapshot (instead of Release)
 - This will set up two separate repositories in Nexus, one for `releases` and one for `snapshots`.
   
@@ -269,15 +269,14 @@ After making changes `save` and Commit the changes.
 
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen8.png)
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen9.png)
-![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen10.png)
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen10.png) TODO: change nex-jen10
 
 1. Add artifacts:
-    - ArtifactId: your ID (subfolder inside your GroupId, e.g., `init-app-v1.0.0`)
+    - ArtifactId: your ID (subfolder inside your GroupId, e.g., `init-app-v1.0`)
     - Type: `war`
     - Classifier: leave blank
-    - File: enter the complete link to your `.war file` on your backend. 
-    - Default link could be found in: `/var/lib/jenkins/`(e.g., /var/lib/jenkins/workspace/your-project-name/target/vin-app-v1.0.0.war)
-2. Save the changes and click `Build Now` to execute the build process.
+    - File: enter the complete path to your `.war file` on your backend. Default path could be found in: `/var/lib/jenkins/`(e.g., `/var/lib/jenkins/workspace/init-app/target/init-app.war`)
+1. Save the changes and click `Build Now` to execute the build process.
 TODO: ![nex-jen]()
 To find your default Jenkins directory:
 
