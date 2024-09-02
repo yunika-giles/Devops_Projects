@@ -276,8 +276,8 @@ After making changes `save` and Commit the changes.
     - Type: `war`
     - Classifier: leave blank
     - File: enter the complete path to your `.war file` on your backend. Default path could be found in: `/var/lib/jenkins/`(e.g., `/var/lib/jenkins/workspace/init-app/target/init-app.war`)
-![nex-jen]()
-![nex-jen]()
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen11.png)
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen12.png)
 2. Save the changes and click `Build Now` to execute the build process.
 
 ## Jenkins Docker Integrations 
