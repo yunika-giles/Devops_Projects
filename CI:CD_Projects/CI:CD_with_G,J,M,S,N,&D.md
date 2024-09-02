@@ -269,19 +269,16 @@ After making changes `save` and Commit the changes.
 
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen8.png)
 ![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen9.png)
-![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen10.png) TODO: change nex-jen10
+![nex-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/nex-jen10.png)
 
 1. Add artifacts:
     - ArtifactId: your ID (subfolder inside your GroupId, e.g., `init-app-v1.0`)
     - Type: `war`
     - Classifier: leave blank
     - File: enter the complete path to your `.war file` on your backend. Default path could be found in: `/var/lib/jenkins/`(e.g., `/var/lib/jenkins/workspace/init-app/target/init-app.war`)
-1. Save the changes and click `Build Now` to execute the build process.
-TODO: ![nex-jen]()
-To find your default Jenkins directory:
-
-1. Go to the Dashboard
-2. Click on `System`
+![nex-jen]()
+![nex-jen]()
+2. Save the changes and click `Build Now` to execute the build process.
 
 ## Jenkins Docker Integrations 
 1. Go to the Dashboard and click on `+ New Item`.
