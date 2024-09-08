@@ -283,6 +283,31 @@ After making changes `save` and Commit the changes.
 2. Save the changes and click `Build Now` to execute the build process.
 
 ## Jenkins Docker Integrations 
+**Create DockerHub Credentials**
+1. In Jenkins, navigate to the `Dashboard`, select `Manage Jenkins`, and then click on `credentials`
+2.  To Add a New Credential
+- Click on the `Global credentials` tab
+- Click on the `Add Credentials` button
+3. Enter Docker Credential Details as follows
+- Leave `Kind`, and `Scope` as default.
+- Under `username`, input your `Docker username` and `password`.
+- Under `ID`, input your `identifier`.
+- Input your description and select `Add`.
+
+**Create Github-token Credentials**
+
+1. In Jenkins, navigate to the `Dashboard`, select `Manage Jenkins`, and then click on `credentials`
+2.  To Add a New Credential
+- Click on the `Global credentials` tab
+- Click on the `Add Credentials` button
+3. Enter Docker Credential Details as follows
+- Under `Kind`, select `Secret text`.
+- Leave `Scope` as default. 
+- Under `Secret`, Paste in your `github-token`. if you don't have a token Here is a link on [How to create a personal token on GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+- Under `ID`, input your `identifier`.
+- Input your description and select `Add`.
+
+**Pipeline configuration using pipeline script**
 1. Go to the Dashboard and click on `+ New Item`.
 2. Enter your job name, select `Pipeline`, and click `OK`.
 
@@ -290,7 +315,9 @@ After making changes `save` and Commit the changes.
 3. In the `Configure` section, add a description under `General`.
 4. Set the `Discard old builds` option and choose the maximum number of builds to keep.
 5. Select `Pipeline` on the left panel, and under `Definition`, choose `Pipeline script`. 
-6. Edit 
+6. Edit following aspects of your Pipeline script
+ - `GitHub_Repo_URL` with your GitHub Repo.
+ 
 ```python
 pipeline {
     agent { 
