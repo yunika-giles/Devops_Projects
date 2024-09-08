@@ -289,14 +289,14 @@ After making changes `save` and Commit the changes.
 - Click on the `Global credentials` tab
 - Click on the `Add Credentials` button
   
-![doc-jen]()
+![doc-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/doc-jen1.png)
 1. Enter Docker Credential Details as follows
 - Leave `Kind`, and `Scope` as default.
 - Under `username`, input your `Docker username` and `password`.
 - Under `ID`, input your `identifier`.
 - Input your description and select `Create`.
 
-![doc-jen]()
+![doc-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/doc-jen2.png)
 
 **Create Github-token Credentials**
 
@@ -305,7 +305,7 @@ After making changes `save` and Commit the changes.
 - Click on the `Global credentials` tab
 - Click on the `Add Credentials` button
 
-![doc-jen]()
+![doc-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/doc-jen3.png)
 1. Enter Docker Credential Details as follows
 - Under `Kind`, select `Secret text`.
 - Leave `Scope` as default. 
@@ -313,7 +313,7 @@ After making changes `save` and Commit the changes.
 - Under `ID`, input your `identifier`.
 - Input your description and select `Create`.
 
-![doc-jen]()
+![doc-jen](https://github.com/yunika-giles/Devops_Projects/blob/main/CI%3ACD_Projects/Images/doc-jen4.png)
 
 **Pipeline configuration using pipeline script**
 1. Go to the Dashboard and click on `+ New Item`.
