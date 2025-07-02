@@ -180,6 +180,6 @@ user_data = <<-EOF
 
 
   tags = {
-    Name = "Docker-instance"
+    Name = "Docker-Instance"
   }
 }

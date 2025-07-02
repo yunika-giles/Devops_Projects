@@ -283,6 +283,8 @@ After making changes `save` and Commit the changes.
 2. Save the changes and click `Build Now` to execute the build process.
 
 ## Jenkins Docker Integrations 
+**Create agent for Jenkins**
+
 **Create DockerHub Credentials**
 1. In Jenkins, navigate to the `Dashboard`, select `Manage Jenkins`, and then click on `credentials`
 2.  To Add a New Credential
@@ -324,11 +326,12 @@ After making changes `save` and Commit the changes.
 4. Set the `Discard old builds` option and choose the maximum number of builds to keep.
 5. Select `Pipeline` on the left panel, and under `Definition`, choose `Pipeline script`. 
 6. Edit following aspects of your Pipeline script
+ - `Agent label` with your newly created agent label.
  - `GitHub_Repo_URL` with your GitHub Repo.
  
 ```python
 pipeline {
-    agent { 
+    agent { label 'agent' }  // Replace 'wsl-agent' with the label of your agent
 
     environment {
         GITHUB_REPO_URL = 'Paste your GitHub repo'
