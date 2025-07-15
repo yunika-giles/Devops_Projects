@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notes-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notes
+  template:
+    metadata:
+      labels:
+        app: notes
+    spec:
+      containers:
+      - name: notes-container
+        image: python:3.9
+        command: ["python", "/app/app.py"]
+        workingDir: /app
+        env:
+        - name: WELCOME_MESSAGE
+          valueFrom:
+            configMapKeyRef:
+              name: welcome-config
+              key: WELCOME_MESSAGE
+        volumeMounts:
+        - name: notes-volume
+          mountPath: /data
+        - name: app-code
+          mountPath: /app
+      volumes:
+      - name: notes-volume
+        persistentVolumeClaim:
+          claimName: notes-pvc
+      - name: app-code
+        hostPath:
+          path: /path/to/app     # Replace with your local absolute path
+          type: Directory
+

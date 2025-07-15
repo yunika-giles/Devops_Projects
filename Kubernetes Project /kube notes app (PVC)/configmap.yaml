@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: welcome-config
+data:
+  WELCOME_MESSAGE: "Welcome to the Kube Notes App!"
+
